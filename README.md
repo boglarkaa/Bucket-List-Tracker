@@ -1,66 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Bucket List Tracker
 
-## About Laravel
+A web application built with Laravel that allows users to track, manage, and categorize their personal bucket list goals. The app includes features such as user authentication, CRUD operations for goals, filtering by status and category, and a search function.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Bucket List Tracker Screenshot](public/images/screenshots/dashboard.jpeg)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background bucketlist processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. User Authentication
+- **Sign up / Log in**: Users can create accounts and log in to track their own bucket list.
+- **Log out**: Securely log out of the application.
 
-## Learning Laravel
+### 2. CRUD Operations
+- **Add**: Users can add new goals to their bucket list, including a title, description, and an image.
+- **Read**: View a list of goals with images and statuses.
+- **Update**: Edit existing goals to change their status or details.
+- **Delete**: Remove completed or unwanted goals from the list.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. Filter Options
+- **By Status**: Users can filter goals by their current status (e.g., Pending, In Progress, Completed).
+- **By Category**: Users can categorize their goals (e.g., Travel, Skills & Learning, Fitness & Health).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 4. Search Functionality
+- **Search by Title**: Easily search for goals by entering keywords in the search bar.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tech Stack
+- **Backend**: Laravel (PHP)
+- **Frontend**: Blade templates, HTML, CSS (Tailwind)
+- **Database**: MySQL
+- **Authentication**: Built-in Laravel authentication
+- **Image Storage**: Public image uploads for goal representation
 
-## Laravel Sponsors
+## Screenshots
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Guest Screen 
+![Guest Screen](public/images/screenshots/no_account.jpeg)
 
-### Premium Partners
+### Add Goal Form
+![Add Goal](public/images/screenshots/add_goal_form.jpeg)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### View Goal Details
+![View Goal Details](public/images/screenshots/show_goal.jpeg)
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/bucket-list-tracker.git
+    ```
 
-## Code of Conduct
+2. **Install dependencies**:
+    ```bash
+    cd bucket-list-tracker
+    composer install
+    npm install
+    npm run dev
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. **Set up environment file**:
+    Copy `.env.example` to `.env` and configure your database settings:
+    ```bash
+    cp .env.example .env
+    ```
 
-## Security Vulnerabilities
+4. **Generate the application key**:
+    ```bash
+    php artisan key:generate
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. **Run migrations**:
+    ```bash
+    php artisan migrate
+    ```
 
-## License
+6. **Run the application**:
+    ```bash
+    php artisan serve
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Usage
+
+- Sign up or log in to create a personal bucket list.
+- Use the "Add Goal" button to create new goals.
+- Filter your goals by status or category.
+- Use the search bar to quickly find specific goals.
+  
+## Future Enhancements
+
+- **Goal Reminders**: Get notifications for upcoming goals or due dates.
+- **Sharing**: Share goals or completed tasks with friends.
+- **Progress Tracking**: Add a percentage progress tracker for long-term goals.
+
+
